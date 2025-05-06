@@ -3,16 +3,11 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   modules: [
+    // Adicionando o módulo Tailwind CSS
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/axios'
   ],
   css: [
+    // Adicionando o CSS global do Tailwind
     '~/assets/css/styles.css',
   ],
-  runtimeConfig: {
-    public: {
-      apiBase: 'http://localhost:8080/api'
-    }
-  }
-
 })
