@@ -10,4 +10,9 @@ export default defineNuxtConfig({
     // Adicionando o CSS global do Tailwind
     '~/assets/css/styles.css',
   ],
+  runtimeConfig: {
+    public: {
+      API_URL: 'http://localhost:8080'
+    }
+  }
 })
