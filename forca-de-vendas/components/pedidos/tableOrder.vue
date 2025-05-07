@@ -21,7 +21,7 @@
                 class="px-4 py-3 whitespace-nowrap cursor-pointer hover:underline text-blue-600 font-medium"
                 @click="$router.push(`/itens/${pedido.id_pedido}`)"
               >
-                {{ pedido.cod_pedido }}
+                {{ pedido.codPedido }}
               </td>
               <td class="px-4 py-3 whitespace-nowrap">{{ pedido.emissao }}</td>
               <td class="px-4 py-3">Cliente {{ pedido.id_cliente }}</td>
