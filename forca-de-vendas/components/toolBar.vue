@@ -8,7 +8,7 @@
           <div class="menu-item dropdown group">
             Pedidos
             <div class="dropdown-menu">
-              <router-link to="/pedidos/novos" class="dropdown-item">Novos Pedidos</router-link>
+              <router-link to="/pedidos" class="dropdown-item">Monitoramento de Pedidos</router-link>
               <router-link to="/pedidos/andamento" class="dropdown-item">Em Andamento</router-link>
               <router-link to="/pedidos/concluidos" class="dropdown-item">Concluídos</router-link>
             </div>
