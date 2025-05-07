@@ -1,18 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import OrderPage from '../pages/order/index.vue'
+import ItensPage from '@/pages/itens/index.vue' // Altere conforme o seu caminho real
 
 const routes = [
   {
-    path: '/order', // URL de acesso à página de pedidos
-    name: 'Order',
-    component: OrderPage, // O componente que será renderizado
+    path: '/itens/:id_pedido', // A rota espera um parâmetro dinâmico id_pedido
+    name: 'itens',
+    component: ItensPage, // Componente de itens
+    props: true // Passa os parâmetros da URL como props para o componente
   },
-  // Outras rotas podem ser configuradas aqui
+  // Outras rotas
 ]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes, // Rotas da aplicação
+  routes
 })
 
 export default router

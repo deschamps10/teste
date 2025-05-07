@@ -51,4 +51,18 @@
       </div>
     </div>
   </div>
+
+  <!-- Caso não haja pedidos -->
+  <div v-else>
+    <p class="text-center text-gray-500">Nenhum pedido encontrado.</p>
+  </div>
 </template>
+
+<script setup>
+defineProps({
+  pedidos: {
+    type: Array,
+    required: true
+  }
+})
+</script>

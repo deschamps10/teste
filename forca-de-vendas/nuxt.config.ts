@@ -1,18 +1,19 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
+
+  // Configuração automática das rotas
+  pages: true, // Remover a configuração de páginas manual se você preferir que o Nuxt resolva isso automaticamente
+
   modules: [
-    // Adicionando o módulo Tailwind CSS
     '@nuxtjs/tailwindcss',
   ],
   css: [
-    // Adicionando o CSS global do Tailwind
     '~/assets/css/styles.css',
   ],
   runtimeConfig: {
     public: {
-      API_URL: 'http://localhost:8080'
-    }
-  }
+      API_URL: 'http://localhost:8080',
+    },
+  },
 })

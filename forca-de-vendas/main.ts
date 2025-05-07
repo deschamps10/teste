@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
-import App from '../forca-de-vendas/app.vue'
-import router from './router'  // Importando o router
+import App from './app.vue'
+import router from './router' // Certifique-se de que o caminho do arquivo de rotas está correto
 
-createApp(App)
-  .use(router)  // Registrando o Vue Router
-  .mount('#app')
+const app = createApp(App)
+app.use(router) // Usa o Vue Router
+app.mount('#app')
