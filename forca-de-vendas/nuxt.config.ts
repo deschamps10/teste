@@ -2,8 +2,11 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
 
-  // Configuração automática das rotas
-  pages: true, // Remover a configuração de páginas manual se você preferir que o Nuxt resolva isso automaticamente
+  server: {
+    host: '0.0.0.0', // Aceitar conexões externas
+    port: 3000, // Pode ser alterado para a porta que você desejar
+  },
+
   modules: [
     '@nuxtjs/tailwindcss',
   ],
