@@ -1,92 +1,67 @@
 <template>
-    <nav class="w-full h-16 bg-white shadow-md border-b border-gray-100 flex items-center justify-center px-6 sticky top-0 z-50">
-      <div class="flex items-center space-x-1 max-w-7xl w-full">
-        <!-- Menu Items -->
-        <div class="flex flex-1 items-center space-x-1 ">
-          <div class="menu-item dropdown group">
+  <nav class="w-full h-16 bg-white shadow-md border-b border-gray-100 flex items-center justify-center px-6 sticky top-0 z-50">
+    <div class="flex items-center justify-between max-w-7xl w-full">
+      <!-- Menu da Esquerda -->
+      <div class="flex items-center space-x-2">
+        <!-- Exemplo: Menu com Dropdown -->
+        <div class="relative group">
+          <button class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">
             Usuários
-            <div class="dropdown-menu">
-              <router-link to="/usuarios/perfil-de-acesso" class="dropdown-item">Perfil de Acesso</router-link>
-              <router-link to="/pedidos/andamento" class="dropdown-item">Usuários</router-link>
-            </div>
-          </div>
-          <router-link to="/acessos" class="menu-item">Acessos</router-link>
-          <div class="menu-item dropdown group">
-            Pedidos
-            <div class="dropdown-menu">
-              <router-link to="/pedidos" class="dropdown-item">Monitoramento de Pedidos</router-link>
-              <router-link to="/pedidos/andamento" class="dropdown-item">Em Andamento</router-link>
-              <router-link to="/pedidos/concluidos" class="dropdown-item">Concluídos</router-link>
-            </div>
-          </div>
-          <div class="menu-item dropdown group">
-            Configuração
-            <div class="dropdown-menu">
-              <router-link to="/config/geral" class="dropdown-item">Geral</router-link>
-              <router-link to="/config/permissoes" class="dropdown-item">Permissões</router-link>
-              <router-link to="/config/integracao" class="dropdown-item">Integração</router-link>
-            </div>
-          </div>
-          <router-link to="/workflow" class="menu-item">Workflow</router-link>
-          <router-link to="/acervo" class="menu-item">Acervo</router-link>
-          <router-link to="/inteligencia" class="menu-item">Inteligência</router-link>
-          <div class="menu-item dropdown group">
-            Relatórios
-            <div class="dropdown-menu">
-              <router-link to="/relatorios/vendas" class="dropdown-item">Vendas</router-link>
-              <router-link to="/relatorios/financeiro" class="dropdown-item">Financeiro</router-link>
-              <router-link to="/relatorios/performance" class="dropdown-item">Performance</router-link>
-            </div>
+          </button>
+          <div class="absolute left-0 mt-1 w-48 bg-white rounded-md shadow-lg py-1 z-10 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 origin-top transform scale-95 group-hover:scale-100">
+            <router-link to="/usuarios/perfil-de-acesso" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Perfil de Acesso</router-link>
+            <router-link to="/usuarios" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Usuários</router-link>
           </div>
         </div>
-  
-        <!-- Right Side Icons -->
-        <div class="flex items-center space-x-4 pl-4">
-          <router-link to="/crm" class="menu-item">CRM</router-link>
-          <router-link to="/storelink" class="menu-item">Storelink</router-link>
-          <router-link to="/ajuda" class="menu-item">Ajuda</router-link>
-          
-          <button class="menu-icon hover:bg-gray-100" title="Configurações">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+
+        <router-link to="/acessos" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">Acessos</router-link>
+        <router-link to="/workflow" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">Workflow</router-link>
+        <router-link to="/acervo" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">Acervo</router-link>
+        <router-link to="/inteligencia" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">Inteligência</router-link>
+      </div>
+
+      <!-- Menu da Direita -->
+      <div class="flex items-center space-x-4">
+        <router-link to="/crm" class="text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-md">CRM</router-link>
+        <router-link to="/storelink" class="text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-md">Storelink</router-link>
+        <router-link to="/ajuda" class="text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-md">Ajuda</router-link>
+
+        <!-- Perfil Dropdown -->
+        <div class="relative group">
+          <button class="w-9 h-9 flex items-center justify-center rounded-full hover:bg-gray-100" title="Perfil">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
             </svg>
           </button>
-          
-          <button class="menu-icon hover:bg-gray-100" title="Perfil">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-            </svg>
-          </button>
+          <div class="absolute right-0 mt-2 w-56 bg-white border border-gray-100 rounded-md shadow-lg py-1 z-20 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 origin-top-right transform scale-95 group-hover:scale-100">
+            <router-link to="/usuario/configuracoes" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M11 17a1 1 0 001-1v-1h3a1 1 0 000-2h-3v-1a1 1 0 00-2 0v1H6a1 1 0 000 2h3v1a1 1 0 001 1z" />
+              </svg>
+              Configurações de Usuário
+            </router-link>
+            <button @click="logout" class="w-full flex items-center px-4 py-2 text-sm text-red-600 hover:bg-red-50">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h6a1 1 0 010 2H5v10h5a1 1 0 110 2H4a1 1 0 01-1-1V4zm12.293 1.293a1 1 0 011.414 1.414L15.414 9H9a1 1 0 100 2h6.414l-1.707 1.707a1 1 0 001.414 1.414l3.414-3.414a1 1 0 000-1.414l-3.414-3.414z" clip-rule="evenodd" />
+              </svg>
+              Sair
+            </button>
+          </div>
         </div>
       </div>
-    </nav>
-  </template>
-  
-  <style scoped>
-  .menu-item {
-    @apply px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200;
+    </div>
+  </nav>
+</template>
+
+<script>
+export default {
+  methods: {
+    logout() {
+      // Exemplo de ação de logout
+      console.log("Logout realizado");
+      this.$router.push("/login");
+    }
   }
-  
-  .menu-icon {
-    @apply w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-200;
-  }
-  
-  .dropdown {
-    @apply relative;
-  }
-  
-  .dropdown-menu {
-    @apply absolute left-0 mt-1 w-48 bg-white rounded-md shadow-lg py-1 z-10 
-           invisible opacity-0 group-hover:visible group-hover:opacity-100 
-           transition-all duration-200 origin-top transform scale-95 group-hover:scale-100;
-  }
-  
-  .dropdown-item {
-    @apply block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100;
-  }
-  
-  .router-link-active {
-    @apply text-blue-600 bg-blue-50;
-  }
-  </style>
+}
+</script>
