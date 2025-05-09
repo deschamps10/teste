@@ -4,9 +4,6 @@ export default defineNuxtConfig({
 
   // Configuração automática das rotas
   pages: true, // Remover a configuração de páginas manual se você preferir que o Nuxt resolva isso automaticamente
-
-  plugins: ['~/plugins/session.ts'],
-
   modules: [
     '@nuxtjs/tailwindcss',
   ],

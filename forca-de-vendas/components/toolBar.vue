@@ -2,8 +2,14 @@
     <nav class="w-full h-16 bg-white shadow-md border-b border-gray-100 flex items-center justify-center px-6 sticky top-0 z-50">
       <div class="flex items-center space-x-1 max-w-7xl w-full">
         <!-- Menu Items -->
-        <div class="flex flex-1 items-center space-x-1">
-          <router-link to="/usuarios" class="menu-item">Usuários</router-link>
+        <div class="flex flex-1 items-center space-x-1 ">
+          <div class="menu-item dropdown group">
+            Usuários
+            <div class="dropdown-menu">
+              <router-link to="/usuarios/perfil-de-acesso" class="dropdown-item">Perfil de Acesso</router-link>
+              <router-link to="/pedidos/andamento" class="dropdown-item">Usuários</router-link>
+            </div>
+          </div>
           <router-link to="/acessos" class="menu-item">Acessos</router-link>
           <div class="menu-item dropdown group">
             Pedidos
