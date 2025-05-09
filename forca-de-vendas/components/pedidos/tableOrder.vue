@@ -66,3 +66,23 @@ defineProps({
   }
 })
 </script>
+
+<style scoped>
+@media (max-width: 768px) {
+  .min-w-full {
+    min-width: 600px; /* Definir um valor mínimo para a largura da tabela */
+  }
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  .text-xs {
+    font-size: 12px;
+  }
+}
+</style>
