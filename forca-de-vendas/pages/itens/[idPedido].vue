@@ -5,11 +5,11 @@ import ListItens from '@/components/itens/listItens.vue'; // Importe o component
 
 // Obtém o parâmetro da rota
 const route = useRoute();
-const id_pedido = route.params.id_pedido; // Sem a tipagem explícita
+const idPedido = route.params.idPedido; // Sem a tipagem explícita
 
 // Configura a URL para a API
 const config = useRuntimeConfig();
-const url = `${config.public.API_URL}/itens/${id_pedido}`;
+const url = `${config.public.API_URL}/itens/${idPedido}`;
 
 // Fetch os dados da API
 const { data, error, pending } = await useFetch(url);

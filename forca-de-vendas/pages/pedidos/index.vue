@@ -15,7 +15,6 @@ const { data: pedidos, pending, error } = await useFetch(`${config.public.API_UR
 
       <!-- Filtro de Pedidos -->
       <div class="mb-4">
-        <FilterOrder />
       </div>
 
       <!-- Tabela de Pedidos -->
